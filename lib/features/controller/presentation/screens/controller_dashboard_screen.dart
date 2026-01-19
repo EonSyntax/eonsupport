@@ -126,9 +126,12 @@ class ControllerDashboardScreen extends StatelessWidget {
                 ],
               ),
             ),
-            FilledButton(
-              onPressed: isOnline ? () {} : null,
-              child: const Text('Connect'),
+            SizedBox(
+              width: 100,
+              child: FilledButton(
+                onPressed: isOnline ? () {} : null,
+                child: const Text('Connect'),
+              ),
             ),
           ],
         ),

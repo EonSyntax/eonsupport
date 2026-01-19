@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:eonsupport/core/constants/app_constants.dart';
 import 'package:eonsupport/core/extensions/context_extensions.dart';
-import 'package:eonsupport/features/controller/presentation/screens/controller_dashboard_screen.dart';
-import 'package:eonsupport/features/host/presentation/screens/host_dashboard_screen.dart';
 
 /// Role Selection screen for EonSupport.
 /// Allows users to choose between Controller Mode (provide support) or Host Mode (receive support).
@@ -135,14 +133,10 @@ class RoleSelectionScreen extends StatelessWidget {
   }
 
   void _navigateToController(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => const ControllerDashboardScreen()),
-    );
+    Navigator.of(context).pushNamed(AppConstants.routeControllerDashboard);
   }
 
   void _navigateToHost(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => const HostDashboardScreen()),
-    );
+    Navigator.of(context).pushNamed(AppConstants.routeHostDashboard);
   }
 }
